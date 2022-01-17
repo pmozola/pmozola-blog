@@ -1,0 +1,13 @@
+<div class="banner-innerpage" [ngStyle]="{'background-image': 'url(' + headerService.image + ')'}">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-md-6 align-self-center text-center">
+                <h1 class="title">{{headerService.title}}</h1>
+                <h5 class="subtitle op-5" *ngIf="headerService.subtitle !== ''">
+                    {{headerService.subtitle}}
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
