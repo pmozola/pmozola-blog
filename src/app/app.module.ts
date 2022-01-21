@@ -1,8 +1,9 @@
-import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NgModule, SecurityContext } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MarkdownModule } from 'ngx-markdown';
 import { RelayOnComponent } from './about/About-Components/relay-on/relay-on.component';
 import { TopContentComponent } from './about/About-Components/top-content/top-content.component';
 import { AboutComponent } from './about/about.component';
@@ -38,7 +39,11 @@ import { HeaderComponent } from './shared/header/header.component';
     HttpClientModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MarkdownModule.forRoot({
+      loader: HttpClient,
+      sanitize: SecurityContext.NONE
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
