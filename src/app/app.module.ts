@@ -9,8 +9,8 @@ import { AboutComponent } from './about/about.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
-import { BlogComponent } from './blog/blog.component';
+import { BlogDetailComponent } from './blog_old/blog-detail/blog-detail.component';
+import { BlogComponent } from './blog_old/blog.component';
 import { FullComponent } from './layout/full/full.component';
 import { BannerNavigationComponent } from './shared/banner-navigation/banner-navigation.component';
 import { BannerComponent } from './shared/banner/banner.component';
