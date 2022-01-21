@@ -15,13 +15,14 @@ export class BlogDetailComponent extends PageBase implements OnInit {
   id: any;
   blogDetail: Blog | null = null;
 
-  constructor(activatedRouter: ActivatedRoute, public service: ServiceblogService, public router: Router, headerService:HeaderService) {
-    super(headerService, "BLOG DETAIL PAGE","assets/images/landingpage/banner-bg2.jpg", " We are Small Team of Creative People working together");
+  constructor(activatedRouter: ActivatedRoute, public service: ServiceblogService, public router: Router, headerService: HeaderService) {
+    super(headerService,);
     this.id = activatedRouter.snapshot.paramMap.get('id');
   }
 
   ngOnInit(): void {
     this.blogDetail = this.service.Blogs.filter(x => x.id === +this.id)[0];
+    this.initPage("BLOG DETAIL PAGE", "assets/images/landingpage/banner-bg2.jpg", " We are Small Team of Creative People working together");
 
   }
 
@@ -30,13 +31,13 @@ export class BlogDetailComponent extends PageBase implements OnInit {
   }
 
   newPost() {
-    this.service.showEdit=false;
+    this.service.showEdit = false;
     this.router.navigate([('/post')]);
 
   }
 
   editPost() {
-    this.service.showEdit=false;
+    this.service.showEdit = false;
     this.router.navigate([('/editPost'), this.blogDetail?.id]);
   }
 

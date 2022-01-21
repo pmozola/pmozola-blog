@@ -17,6 +17,7 @@ import { BannerNavigationComponent } from './shared/banner-navigation/banner-nav
 import { BannerComponent } from './shared/banner/banner.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { NotFoundPageComponent } from './shared/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +29,10 @@ import { HeaderComponent } from './shared/header/header.component';
     TopContentComponent,
     FullComponent,
     BannerComponent,
-    // BannerContentComponent,
     BannerNavigationComponent,
     FooterComponent,
     HeaderComponent,
+    NotFoundPageComponent,
   ],
   imports: [
     BrowserModule,
